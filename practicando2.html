@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 pantalla="platzilg">Mi portafolio</h1>
+    <h1>MANIPULACION DEL DOM BASICA</h1>
+    <p class="parrafito">Esto en un parrafo con clase</p>
+    <p id="pid">Esto es un parrafo con id</p>
+    <button id="btnHola" onclick="saludar()">hola</button>
+    <br>
+    <h3>----------------</h3>
+    <input onchange="console.log('cambio el input')" id="calculo1" placeholder="Escriba algo aqui">
+    <input id="calculo2" placeholder="Escriba algo aqui">
+    <button id="btnCalcular" onclick='btnOnclick()'>calcular</button>
+    <button id="btnCalcular2">calcular 2</button>
+    <h1 class="resultado"></h1>
+
+
+    <script src="./practicando.js">
+        //declarando una variable y colocando una funcion
+        let nombre=prompt("Cual es tu nombre");
+
+        function verificarNombre(nombre){
+            if(nombre==="saul"){
+                alert("nombre correcto");
+            }else{
+                alert("nombre incorrecto");
+            }
+        }
+       verificarNombre(nombre);
+
+        //objeto
+        const obj={
+            name:"saul",
+            apellido:"cabello",
+        }
+
+        //arreglo
+        const arreglo=["saul","cabello"];
+        function imprimiElementoPorElemento(arr){
+            for(let i=0;i<arr.length;i++){
+                    console.log(arr[i]);
+            }
+        }
+
+        function imprimirElementoPorElemento2(obj){
+            //cambiar un objeto por arreglo
+            const arr=Object.values(obj);
+
+            for(let i=0;i<arr.length;i++){
+                console.log(arr[i]);
+            }
+        }
+        imprimiElementoPorElemento(arreglo);
+        imprimirElementoPorElemento2(obj);
+        
+        
+    </script>
+    
+</body>
+</html>
